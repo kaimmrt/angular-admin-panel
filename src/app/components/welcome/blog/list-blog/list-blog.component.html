@@ -1,0 +1,9 @@
+<div>
+    <button routerLink="/welcome/blog/add" class="navigate-button">+ Add Blog</button>
+    <div class="blog-container" *ngFor="let blog of blogs">
+        <h3>{{blog.title}}</h3>
+        <p>{{blog.content}}</p>
+        <button [routerLink]="['/welcome/blog/update', blog._id]">Edit</button>
+        <button>Delete</button>
+    </div>
+</div>

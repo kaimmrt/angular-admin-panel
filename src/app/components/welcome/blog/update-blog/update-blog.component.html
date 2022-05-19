@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Edit Blog</h1>
+    <form *ngIf="blog" nz-form [formGroup]="blogForm" class="form">
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+                <nz-input-group nzPrefixIcon="user">
+                    <input class="input" formControlName="title" nz-input placeholder="Title" />
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+                <nz-input-group nzPrefixIcon="user">
+                    <textarea class="input" formControlName="content" nz-input placeholder="Content"></textarea>
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-control>
+                <button class="create-button" (click)="update()">Update</button>
+            </nz-form-control>
+        </nz-form-item>
+
+        <button class=" cancel-button" routerLink="/welcome/blog">Cancel</button>
+    </form>
+</div>
